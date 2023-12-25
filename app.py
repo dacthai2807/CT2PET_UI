@@ -1,6 +1,7 @@
+from baseline_BBDM.BBDM_folk.model.BrownianBridge.LatentBrownianBridgeModel import LatentBrownianBridgeModel as LBBDM
 from flask import Flask, render_template, request, flash, redirect
 import os
-from model import *
+# from model import *
 import numpy as np
 from PIL import Image
 from datetime import datetime
@@ -9,6 +10,9 @@ import warnings
 warnings.filterwarnings("ignore")
 import pydicom
 import torchvision.transforms as transforms
+import yaml
+import argparse
+import omegaconf 
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -16,10 +20,27 @@ app.secret_key = "super secret key"
 org_out = './upload/'
 device_1 = 'cuda:0'
 device_2 = 'cuda:2'
+
+f = open('/home/vaipe/PET_CT/CT2PET_UI/baseline_BBDM/BBDM_folk/configs/LBBDMxVq13.yaml', 'r')
+dict_config = yaml.load(f, Loader=yaml.FullLoader)
+
+def dict2namespace(config):
+    namespace = argparse.Namespace()
+    for key, value in config.items():
+        if isinstance(value, dict) or isinstance(value, omegaconf.dictconfig.DictConfig):
+            new_value = dict2namespace(value)
+        else:
+            new_value = value
+        setattr(namespace, key, new_value)
+    return namespace
+
+nconfig = dict2namespace(dict_config)
+baseline_BBDM = LBBDM(nconfig.model)
+baseline_BBDM.eval()
 # detection = DETECT(weight_path="./weights/craft_v1.pth", device=device_1)
 # detection = DETECT(device=device_2)
 # recognition = RECOGNIZE(device=device_2)
-temp_classify = TEMP_CLASSIFY(weight_path='./weights/template_classify_mbn.pth', device='cpu')
+# temp_classify = TEMP_CLASSIFY(weight_path='./weights/template_classify_mbn.pth', device='cpu')
 
 # gcn_chungnhan = INFO_EXTRACT(weight_path='./weights/layout_v2_final_gcn_chungnhan_2022-11-27.pth', template='gcn_chungnhan', device=device_2)
 # gcn_nhao_dato = INFO_EXTRACT(weight_path='./weights/layout_v2_final_gcn_nhao_dato_2023-01-17.pth', template='gcn_nhao_dato', device=device_1)
@@ -76,8 +97,11 @@ def get_info():
         # img = np.array(image)
         image = Image.fromarray(pixel_data) 
         image = transform(image)
+        x_cond = image.to(device_1)
         
+        sample = baseline_BBDM.sample(x_cond, clip_denoised=False)
         
+        print(sample.min(), sample.max(), sample.shape)
         
         return
         begin = datetime.now()
