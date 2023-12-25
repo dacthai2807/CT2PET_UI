@@ -1,0 +1,15 @@
+.img {
+    justify-content: center;
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+}
+
+.text__left {
+    text-align: left;
+}
+
+.container__custom {
+    margin-left: 5%;
+    margin-right: 5%;
+}

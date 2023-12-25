@@ -1,0 +1,467 @@
+
+
+
+(base)  mbbank@aiotlab  ~/hieu_doan  conda activate gpu
+(gpu)  mbbank@aiotlab  ~/hieu_doan  python app.py
+<frozen importlib._bootstrap>:219: RuntimeWarning: scipy._lib.messagest
+ream.MessageStream size changed, may indicate binary incompatibility. E
+xpected 56 from C header, got 64 from PyObject
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production de
+ployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9876
+ * Running on http://192.168.67.124:9876
+Press CTRL+C to quit
+ * Restarting with stat
+<frozen importlib._bootstrap>:219: RuntimeWarning: scipy._lib.messagest
+ream.MessageStream size changed, may indicate binary incompatibility. E
+xpected 56 from C header, got 64 from PyObject
+ * Debugger is active!
+ * Debugger PIN: 591-332-451
+127.0.0.1 - - [06/Sep/2023 09:05:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 09:05:33] "GET /static/style.css HTTP/1.1" 3
+04 -
+===== start =====
+(1000, 695, 3)
+template classify 0:00:00.068130
+brighten_denoise image 0:00:00.002545
+rotate image 0:01:09.969496
+detect time 0:00:00.504683
+recog time 0:00:05.913916
+QUẬN TÂN PHÚ TP HỒ CHÍ MINH
+quan tan phu tp ho chi minh
+7 9 7 6 1 2 7 6 1 3 2 5 0
+7976127613250
+Địa chỉ: 202 LAI các Tây Và Thạnh Đường Vi C8 phường Tây Thanh quận Tân
+ Phú
+dia chi 202 lai cac tay va thanh duong vi c8 phuong tay thanh quan tan
+phu
+202 lai cac tay va thanh duong vi c8 phuong tay thanh quan tan phu
+Thừa đất số MPT2
+thua dat so mpt2
+mpt2)
+Tờ ở bản đổ số 12(BĐĐC)
+to ban do so 12(bddc)
+12(bddc)
+Diện tích: 1603.40
+dien tich 1603.40
+1603.40
+Diện tích san (nha ở can hộ): 64.90
+dien tich san (nha o can ho) 64.90
+64.90
+Sử dụng riêng
+su dung rieng
+///
+Sử dụng chung: 1603.40
+su dung chung 1603.40
+1603.40
+Cấp (hạng) nhà ở
+cap hang nha o
+Thời hạn được sở hữu: Lầu đài
+thoi han duoc so huu: lau dai
+lau dai
+quôn Tâu Phú
+quon tau phu
+ong nguyen chi kha
+nguyen chi kha
+sinh nam 1983
+cmnd so 385188832
+bi thai phuong dung
+thai phuong dung
+sinh nam 1983
+cmnd so 023754243
+kie and draw and post time 0:00:00.758999
+total time consuming 0:01:17.218377
+===== done =====
+gcn_chungnhan
+127.0.0.1 - - [06/Sep/2023 09:06:57] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 09:07:03] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 09:07:03] "GET /static/style.css HTTP/1.1" 3
+04 -
+===== start =====
+(1000, 707, 3)
+template classify 0:00:00.049336
+brighten_denoise image 0:00:00.002138
+rotate image 0:00:00.372657
+detect time 0:00:00.620807
+recog time 0:00:01.102889
+QUẬN 1 THÀNH PHỐ HỒ CHÍI MINH
+quan 1 thanh pho ho chi minh
+7 9 7 6 0 2 6 7 4 3 0 2 2
+7976026743022
+Địa chỉ: 120-122 (tầng 13) Lê 1 Lợi, p. Bên Thành, Quận
+dia chi 120122 (tang 13) le 1 loi, p. ben thanh, quan
+120122 tang 13 le loi, p. ben thanh, quan
+Thửa đất số: 100
+thua dat so 100
+100
+Tờ bản đồ số: 14
+to ban do so 14
+14
+Diện tích: 71,24
+dien tich 71,24
+71,24
+Diện tích sàn (nhà ở, cần hộ): 59,14
+dien tich san (nha o can ho) 59,14
+59,14
+Sử r dụng riêng:
+su dung rieng :
+Sử r dụng 6 chung: 71,24
+su dung chung 71,24
+71,24
+Cấp (hạng) nhà Ở:
+cap hang nha o 3
+Thời hạn được sở hữu: Lâu dài
+thoi han duoc so huu: lau dai
+lau dai
+Quận 1
+quan 1
+ong huynh kimi khanh
+huynh kimi khanh
+nam sinh 1964
+cmnd so 023987619
+ba tran thi hien
+tran thi hien
+nam sinh 1966
+cmnd so 3 024250059
+kie and draw and post time 0:00:00.121253
+total time consuming 0:00:02.269310
+===== done =====
+gcn_chungnhan
+127.0.0.1 - - [06/Sep/2023 09:07:12] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 09:07:12] "GET /static/style.css HTTP/1.1" 3
+04 -
+127.0.0.1 - - [06/Sep/2023 09:14:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 09:14:30] "GET /static/style.css HTTP/1.1" 2
+00 -
+===== start =====
+(1000, 775, 3)
+template classify 0:00:00.050651
+brighten_denoise image 0:00:00.002370
+rotate image 0:00:00.372334
+detect time 0:00:00.652707
+recog time 0:00:01.144759
+QUẬN GÒ VẤP THÀNH NHÂN HỒ CHÍ MINH
+quan go vap thanh pho ho chi minh
+7 9 7 6 4 2 6 8 7 5
+7976426875
+Thửa đất số:
+thua dat so :
+Địa chi: A5- -05 Chung cư An Lộc, Nguyễn Oanh, phường 17, quận Gò Vấp
+dia chi a5- -05 chi cu an loc, nguyen oanh, phuong 17, quan go vap
+a5 05 chung cu an loc, nguyen oanh, phuong 17, quan go vap
+Tờ bản đồ số: 12
+to ban do so 12
+12
+Diện tích: 1252,8
+dien tich 1252,8
+1252,8
+Diện tích sàn (nhà ở căn hộ): 95,6
+dien tich san (nha o can ho) 95,6
+95,6
+Sử " dụng r riêng
+su dung rieng
+///
+Sử " dụng 6 chung:
+su dung chung :
+Cấp - (hạng) nhà Ở: nhà cấp
+cap - hang nha o nha cap
+Thời hạn vì được 5 sở hữu: Lâu đài
+thoi han vi duoc 5 so huu: lau dai
+thoi han vi duoc so huu lau dai
+Quận
+quan
+ba nguyen thi luong
+nguyen thi luong
+nam sinh 1970
+cmnd 181840237
+kie and draw and post time 0:00:00.125437
+total time consuming 0:00:02.348514
+===== done =====
+gcn_chungnhan
+127.0.0.1 - - [06/Sep/2023 09:14:43] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 09:14:43] "GET /static/style.css HTTP/1.1" 2
+00 -
+127.0.0.1 - - [06/Sep/2023 10:33:15] "GET /static/style.css HTTP/1.1" 2
+00 -
+===== start =====
+(1000, 775, 3)
+template classify 0:00:00.051090
+brighten_denoise image 0:00:00.002311
+rotate image 0:00:00.371023
+detect time 0:00:00.622145
+recog time 0:00:01.111135
+QUẬN GÒ VẤP THÀNH NHÂN HỒ CHÍ MINH
+quan go vap thanh pho ho chi minh
+7 9 7 6 4 2 6 8 7 5
+7976426875
+Thửa đất số:
+thua dat so :
+Địa chi: A5- -05 Chung cư An Lộc, Nguyễn Oanh, phường 17, quận Gò Vấp
+dia chi a5- -05 chi cu an loc, nguyen oanh, phuong 17, quan go vap
+a5 05 chung cu an loc, nguyen oanh, phuong 17, quan go vap
+Tờ bản đồ số: 12
+to ban do so 12
+12
+Diện tích: 1252,8
+dien tich 1252,8
+1252,8
+Diện tích sàn (nhà ở căn hộ): 95,6
+dien tich san (nha o can ho) 95,6
+95,6
+Sử " dụng r riêng
+su dung rieng
+///
+Sử " dụng 6 chung:
+su dung chung :
+Cấp - (hạng) nhà Ở: nhà cấp
+cap - hang nha o nha cap
+Thời hạn vì được 5 sở hữu: Lâu đài
+thoi han vi duoc 5 so huu: lau dai
+thoi han vi duoc so huu lau dai
+Quận
+quan
+ba nguyen thi luong
+nguyen thi luong
+nam sinh 1970
+cmnd 181840237
+kie and draw and post time 0:00:00.125072
+total time consuming 0:00:02.283030
+===== done =====
+gcn_chungnhan
+127.0.0.1 - - [06/Sep/2023 10:33:35] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 10:33:35] "GET /static/style.css HTTP/1.1" 2
+00 -
+===== start =====
+(1000, 775, 3)
+template classify 0:00:00.047243
+brighten_denoise image 0:00:00.002265
+rotate image 0:00:00.375012
+detect time 0:00:00.614709
+recog time 0:00:01.117975
+QUẬN GÒ VẤP THÀNH NHÂN HỒ CHÍ MINH
+quan go vap thanh pho ho chi minh
+7 9 7 6 4 2 6 8 7 5
+7976426875
+Thửa đất số:
+thua dat so :
+Địa chi: A5- -05 Chung cư An Lộc, Nguyễn Oanh, phường 17, quận Gò Vấp
+dia chi a5- -05 chi cu an loc, nguyen oanh, phuong 17, quan go vap
+a5 05 chung cu an loc, nguyen oanh, phuong 17, quan go vap
+Tờ bản đồ số: 12
+to ban do so 12
+12
+Diện tích: 1252,8
+dien tich 1252,8
+1252,8
+Diện tích sàn (nhà ở căn hộ): 95,6
+dien tich san (nha o can ho) 95,6
+95,6
+Sử " dụng r riêng
+su dung rieng
+///
+Sử " dụng 6 chung:
+su dung chung :
+Cấp - (hạng) nhà Ở: nhà cấp
+cap - hang nha o nha cap
+Thời hạn vì được 5 sở hữu: Lâu đài
+thoi han vi duoc 5 so huu: lau dai
+thoi han vi duoc so huu lau dai
+Quận
+quan
+ba nguyen thi luong
+nguyen thi luong
+nam sinh 1970
+cmnd 181840237
+kie and draw and post time 0:00:00.134812
+total time consuming 0:00:02.292240
+===== done =====
+gcn_chungnhan
+127.0.0.1 - - [06/Sep/2023 10:34:42] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 10:34:42] "GET /static/style.css HTTP/1.1" 2
+00 -
+127.0.0.1 - - [06/Sep/2023 10:34:45] "POST / HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/mnt/disk1/mbbank/miniconda3/envs/gpu/lib/python3.8/site-packag
+es/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/disk1/mbbank/miniconda3/envs/gpu/lib/python3.8/site-packag
+es/flask/app.py", line 2528, in wsgi_app
+    response = self.handle_exception(e)
+  File "/mnt/disk1/mbbank/miniconda3/envs/gpu/lib/python3.8/site-packag
+es/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/disk1/mbbank/miniconda3/envs/gpu/lib/python3.8/site-packag
+es/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/disk1/mbbank/miniconda3/envs/gpu/lib/python3.8/site-packag
+es/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/disk1/mbbank/miniconda3/envs/gpu/lib/python3.8/site-packag
+es/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_
+args)
+  File "/mnt/disk1/mbbank/hieu_doan/app.py", line 62, in get_info
+    image = Image.open(uploaded_file)
+  File "/mnt/disk1/mbbank/miniconda3/envs/gpu/lib/python3.8/site-packag
+es/PIL/Image.py", line 3147, in open
+    raise UnidentifiedImageError(
+PIL.UnidentifiedImageError: cannot identify image file <FileStorage: ''
+ ('application/octet-stream')>
+127.0.0.1 - - [06/Sep/2023 10:34:45] "GET /?__debugger__=yes&cmd=resour
+ce&f=style.css HTTP/1.1" 304 -
+127.0.0.1 - - [06/Sep/2023 10:34:45] "GET /?__debugger__=yes&cmd=resour
+ce&f=debugger.js HTTP/1.1" 304 -
+127.0.0.1 - - [06/Sep/2023 10:34:45] "GET /?__debugger__=yes&cmd=resour
+ce&f=console.png HTTP/1.1" 304 -
+127.0.0.1 - - [06/Sep/2023 10:34:45] "GET /?__debugger__=yes&cmd=resour
+ce&f=console.png HTTP/1.1" 304 -
+===== start =====
+(1000, 775, 3)
+template classify 0:00:00.055335
+brighten_denoise image 0:00:00.002882
+rotate image 0:00:00.334806
+detect time 0:00:00.605912
+recog time 0:00:01.227249
+QUẬN GÒ VẤP THÀNH NHÂN HỒ CHÍ MINH
+quan go vap thanh pho ho chi minh
+7 9 7 6 4 2 6 8 7 5
+7976426875
+Thửa đất số:
+thua dat so :
+Địa chi: A5- -05 Chung cư An Lộc, Nguyễn Oanh, phường 17, quận Gò Vấp
+dia chi a5- -05 chi cu an loc, nguyen oanh, phuong 17, quan go vap
+a5 05 chung cu an loc, nguyen oanh, phuong 17, quan go vap
+Tờ bản đồ số: 12
+to ban do so 12
+12
+Diện tích: 1252,8
+dien tich 1252,8
+1252,8
+Diện tích sàn (nhà ở căn hộ): 95,6
+dien tich san (nha o can ho) 95,6
+95,6
+Sử " dụng r riêng
+su dung rieng
+///
+Sử " dụng 6 chung:
+su dung chung :
+Cấp - (hạng) nhà Ở: nhà cấp
+cap - hang nha o nha cap
+Thời hạn vì được 5 sở hữu: Lâu đài
+thoi han vi duoc 5 so huu: lau dai
+thoi han vi duoc so huu lau dai
+Quận
+quan
+ba nguyen thi luong
+nguyen thi luong
+nam sinh 1970
+cmnd 181840237
+kie and draw and post time 0:00:00.121131
+total time consuming 0:00:02.347564
+===== done =====
+gcn_chungnhan
+127.0.0.1 - - [06/Sep/2023 10:35:01] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 10:35:02] "GET /static/style.css HTTP/1.1" 2
+00 -
+===== start =====
+(1000, 733, 3)
+template classify 0:00:00.050579
+brighten_denoise image 0:00:00.003298
+rotate image 0:00:00.344246
+detect time 0:00:00.393258
+recog time 0:00:07.218973
+Placc Or Reccipt HAIPHONG, Y VIETNAM HAIPHONG, T VIETNAM Ocean Yessel
+dia chi placc or reccipt haiphong, vietnam haiphong, vietnam ocean yess
+el
+placc or recctpt haiphong, vietnam haiphong, vietnam ocean yessel
+2249,10
+su dung chung 2249,10
+2249,10
+vega rex hanoi co ltd
+vega rex hanoi co ltd
+036000000099
+consistich coltd
+consistich coltd
+tambroin hembilical namentations
+tambroin hembilical namentations
+korearok t82 tp
+korearok t82 tp
+in 1981 turns and conditionson the kinway and threof and the tirms
+in 1981 turns and conditionson the kinway and threof and the tirms
+kie and draw and post time 0:00:00.119753
+total time consuming 0:00:08.130380
+===== done =====
+gcn_chungnhan
+127.0.0.1 - - [06/Sep/2023 10:35:37] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 10:35:37] "GET /static/style.css HTTP/1.1" 2
+00 -
+127.0.0.1 - - [06/Sep/2023 11:25:54] "GET /?zarsrc=31&utm_source=zalo&u
+tm_medium=zalo&utm_campaign=zalo HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 11:25:54] "GET /static/style.css HTTP/1.1" 3
+04 -
+127.0.0.1 - - [06/Sep/2023 11:32:39] "GET / HTTP/1.1" 200 -
+ * Detected change in '/mnt/disk1/mbbank/hieu_doan/app.py', reloading
+ * Restarting with stat
+<frozen importlib._bootstrap>:219: RuntimeWarning: scipy._lib.messagest
+ream.MessageStream size changed, may indicate binary incompatibility. E
+xpected 56 from C header, got 64 from PyObject
+ * Debugger is active!
+ * Debugger PIN: 136-688-528
+===== start =====
+(1000, 780, 3)
+template classify 0:00:00.185643
+brighten_denoise image 0:00:00.002254
+rotate image 0:00:02.697082
+detect time 0:00:00.457094
+recog time 0:00:03.059477
+huyen duc hoa tinh long an
+dia chi thuong tru : ap 3b huu thanh duc hoa long an
+ap 3b huu thanh duc hoa long an
+thua dat so 1239
+1239
+to ban do so .6
+6
+dia chi thua dat ap 3b huu thanh duc hoa long an
+ap 3b huu thanh duc hoa long an
+dien tich 211
+211
+su dung rieng 211
+211
+su dung chung khong
+khong
+muc dich su dung o dat: dat o tai nong thon
+t dat o tai nong thon
+thoi han su dung dat lau dai
+lau dai
+nguon goc su dung 6 dat: nha nuoc cong nhan la quyen s su tr dung 6 dat
+nha nuoc cong nhan quyen su dung dat
+ghi chu
+ba nguyen thi
+nguyen thi
+nam
+so cmnd 300484568
+kie and draw and post time 0:00:00.218535
+total time consuming 0:00:06.620443
+===== done =====
+gcn_qsdd_mst
+127.0.0.1 - - [06/Sep/2023 19:26:20] "POST / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 19:26:20] "GET /static/style.css HTTP/1.1" 3
+04 -
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[
+A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[
+[A^[[A^[[A^[tmux capture-pane -S - -E - > tmux_log.txt
+
+^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[
+B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[
+[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B127.0
+.0.1 - - [06/Sep/2023 20:04:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [06/Sep/2023 20:04:51] "GET /static/style.css HTTP/1.1" 3
+04 -
+tmux capture-pane -S - -E - > tmux_log.txt
+
+tmux capture-pane -S - -E - > tmux_log.txt
+
+

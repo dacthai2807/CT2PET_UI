@@ -1,0 +1,10 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+===== start =====
+(1000, 713, 3)
+template classify 0:00:00.108144
+brighten_denoise image 0:00:00.007876
+===== start =====
+(1000, 713, 3)
+template classify 0:00:00.080574
+brighten_denoise image 0:00:00.004021

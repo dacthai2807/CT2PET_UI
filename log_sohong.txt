@@ -1,0 +1,2 @@
+ * Serving Flask app 'app_sohong'
+ * Debug mode: off
