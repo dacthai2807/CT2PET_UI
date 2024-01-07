@@ -3,7 +3,7 @@ import torch
 import torch.nn.functional as F
 import pytorch_lightning as pl
 
-from utils import instantiate_from_config
+from CT2PET_UI.utils import instantiate_from_config
 from model.VQGAN.taming.modules.util import SOSProvider
 
 

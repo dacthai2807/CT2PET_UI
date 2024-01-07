@@ -1,22 +1,23 @@
+
 data:
-  dataset_name: 'LBBDMxVq13_15k'
+  dataset_name: '1226_segmented_conditional_LBBDM_focal_loss_0.5'
   dataset_type: 'custom_aligned'
   dataset_config:
     max_pixel_ori: 32767 # Pet 
     max_pixel_cond: 2047  # CT
-    dataset_path: '/workdir/carrot/splited_data_15k/'
+    dataset_path: /home/PET-CT/splited_data_15k
     image_size: 256
     channels: 1
     to_normal: True 
     flip: False
   train:
-    batch_size: 8
+    batch_size: 16
     shuffle: True
   val:
-    batch_size: 8
+    batch_size: 16
     shuffle: True
   test:
-    batch_size: 8
+    batch_size: 16
     # shuffle: False
 model: 
   BB: 
@@ -44,11 +45,10 @@ model:
         - 4
         condition_key: nocond
         context_dim:
-        dropout : 0.0
         conv_resample: True
         dims: 2
         image_size: 64
-        in_channels: 3
+        in_channels: 4
         model_channels: 128
         num_head_channels: 64
         num_heads: 8
@@ -98,12 +98,14 @@ model:
         target: torch.nn.Identity
       n_embed: 8192
   latent_before_quant_conv: False
-  model_load_path: /home/vaipe/PET_CT/CT2PET_UI/baseline_BBDM/baseline.pth
+  additional_condition_train_path: /home/PET-CT/thaind/ckpts/Unet/lightning_logs/version_0/samples/train
+  additional_condition_val_path: /home/PET-CT/thaind/ckpts/Unet/lightning_logs/version_0/samples/test
+  # model_load_path: ./results/1216_detected_conditional_LBBDM/LBBDM-f4/checkpoint/last_model.pth
   model_name: LBBDM-f4
   model_type: LBBDM
   normalize_latent: False
   only_load_latent_mean_std: False
-  # optim_sche_load_path: ./results/108_CT2PET/LBBDM-f4/checkpoint/last_optim_sche.pth
+  # optim_sche_load_path: ./results/1216_detected_conditional_LBBDM/LBBDM-f4/checkpoint/last_optim_sche.pth
 
 runner: BBDMRunner
 testing: 

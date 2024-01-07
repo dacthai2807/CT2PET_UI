@@ -6,7 +6,7 @@ import torch
 import random
 import numpy as np
 
-from utils import dict2namespace, get_runner, namespace2dict
+from CT2PET_UI.utils import dict2namespace, get_runner, namespace2dict
 import torch.multiprocessing as mp
 import torch.distributed as dist
 
