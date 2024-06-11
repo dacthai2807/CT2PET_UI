@@ -69,6 +69,100 @@ def get_ct_pixel_data():
     except:
         return jsonify({"data": "Invalid ct format"}), 404
 
+import json    
+import random
+import numpy as np
+
+CT_PET_PATH = '/mnt/disk1/PET_CT/combined'
+ELEMENTS_FILE_PATH = '/mnt/disk1/PET_CT/records/elements.json'
+
+def load_elements():
+    if os.path.exists(ELEMENTS_FILE_PATH):
+        with open(ELEMENTS_FILE_PATH, 'r') as file:
+            return json.load(file)
+    else:
+        new_elements = [(a, b) for a in range(3) for b in range(2688)]
+        save_elements(new_elements)
+        return new_elements
+
+def save_elements(elements):
+    with open(ELEMENTS_FILE_PATH, 'w') as file:
+        json.dump(elements, file)
+    
+@app.route('/get_ct_pet', methods=['GET'])
+@cross_origin()
+def get_ct_pet():
+    elements = load_elements()
+    
+    print(len(elements))
+    
+    if not elements:
+        return jsonify({"data": "No more ct & pet"}), 404
+    
+    try:
+        case, img_id = random.choice(elements)    
+        
+        ct_img = np.load(os.path.join(CT_PET_PATH, 'A', f'{img_id}.npy'), allow_pickle=True)
+        
+        if case != 2:
+            pet_img = np.load(os.path.join(CT_PET_PATH, 'B', f'{img_id}.npy'), allow_pickle=True)
+        else:
+            pet_img = np.load(os.path.join(CT_PET_PATH, 'C', f'{img_id}.npy'), allow_pickle=True)
+        
+        ct = create_to_gen_html(ct_img, None)
+        pet = create_to_gen_html(pet_img, None)
+    
+        result = {
+            "data": {
+                "img_id": img_id,
+                "case": case,
+                "ct": ct,
+                "pet": pet
+            }
+        }
+
+        return jsonify(result)
+    except:
+        return jsonify({"data": "Cannot get ct & pet"}), 404
+
+import csv
+SAVE_PATH = '/mnt/disk1/PET_CT/records/patients.csv'
+
+def write_to_csv(json_data):
+    file_exists = os.path.exists(SAVE_PATH)
+
+    with open(SAVE_PATH, 'a', newline='') as file:
+        fieldnames = ['img_id', 'case', 'status', 'description']
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        
+        if not file_exists:
+            writer.writeheader()
+        
+        writer.writerow({
+            'img_id': json_data['img_id'],
+            'case': json_data['case'],
+            'status': json_data.get('status', ''), 
+            'description': json_data.get('description', '')  
+        })
+
+@app.route('/post_ct_pet', methods=['POST'])
+@cross_origin()
+def post_ct_pet():
+    elements = load_elements()
+    
+    if not elements:
+        return jsonify({"data": "No more ct & pet"}), 404
+    
+    try:
+        json_data = request.json    
+        elements.remove([json_data['case'], json_data['img_id']])
+        save_elements(elements)
+        write_to_csv(json_data)
+
+        return jsonify({"data": "Posted successfully!"})
+    except:
+       return jsonify({"data": "Cannot post ct & pet"}), 404
+
 @app.route('/upload_ct', methods=['POST'])
 @cross_origin()
 def upload_ct():
