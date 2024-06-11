@@ -27,7 +27,7 @@ device_1 = 'cuda:0'
 
 use_ema = True
 
-f = open('/home/vaipe/PET_CT/CT2PET_UI/baseline_BBDM/BBDM_folk/configs/LBBDMxVq13.yaml', 'r')
+f = open('/mnt/disk1/PET_CT/CT2PET_UI/baseline_BBDM/BBDM_folk/configs/LBBDMxVq13.yaml', 'r')
 dict_config = yaml.load(f, Loader=yaml.FullLoader)
 
 def dict2namespace(config):
@@ -42,7 +42,7 @@ def dict2namespace(config):
 
 
 # load_model 
-weight_path = "/home/vaipe/PET_CT/CT2PET_UI/baseline_BBDM/baseline.pth"
+weight_path = "/mnt/disk1/PET_CT/CT2PET_UI/baseline_BBDM/baseline.pth"
 model_states = torch.load(weight_path, map_location='cpu')
 
 nconfig = dict2namespace(dict_config)

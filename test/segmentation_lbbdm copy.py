@@ -26,7 +26,7 @@ import torchvision.transforms as transforms
 IMAGE_SIZE = 256
 from PIL import Image
 
-SEGMENTATION_CHECKPOINT_FILE_PATH = "/home/vaipe/PET_CT/CT2PET_UI/segmented_conditional_BBDM/Unet_resnet34/lightning_logs/version_0/checkpoints/epoch=3-step=6000.ckpt"
+SEGMENTATION_CHECKPOINT_FILE_PATH = "/mnt/disk1/PET_CT/CT2PET_UI/segmented_conditional_BBDM/Unet_resnet34/lightning_logs/version_0/checkpoints/epoch=3-step=6000.ckpt"
 
 
 org_out = './upload/'
@@ -34,10 +34,10 @@ device_1 = 'cuda:0'
 
 use_ema = True
 
-f = open('/home/vaipe/PET_CT/CT2PET_UI/segmented_conditional_BBDM/conditional_LBBDM.yaml', 'r')
+f = open('/mnt/disk1/PET_CT/CT2PET_UI/segmented_conditional_BBDM/conditional_LBBDM.yaml', 'r')
 
 # load_model 
-weight_path = '/home/vaipe/PET_CT/CT2PET_UI/segmented_conditional_BBDM/segmented_guide_lbbdm_52.pth'
+weight_path = '/mnt/disk1/PET_CT/CT2PET_UI/segmented_conditional_BBDM/segmented_guide_lbbdm_52.pth'
 model_states = torch.load(weight_path, map_location='cpu')
 
 dict_config = yaml.load(f, Loader=yaml.FullLoader)
