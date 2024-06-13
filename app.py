@@ -6,7 +6,9 @@ import os
 from PIL import Image
 import pydicom
 import torchvision.transforms as transforms
+from datetime import datetime
 from utils import create_to_gen_html
+import pytz
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -132,17 +134,22 @@ def write_to_csv(json_data):
     file_exists = os.path.exists(SAVE_PATH)
 
     with open(SAVE_PATH, 'a', newline='') as file:
-        fieldnames = ['img_id', 'case', 'status', 'description']
+        fieldnames = ['img_id', 'case', 'status', 'description', 'datetime']
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         
         if not file_exists:
             writer.writeheader()
         
+        tz = pytz.timezone('Asia/Bangkok')  # GMT+7 timezone
+        current_time = datetime.now(tz)
+
+        formatted_datetime = current_time.strftime('%Y-%m-%d %H:%M:%S')
         writer.writerow({
             'img_id': json_data['img_id'],
             'case': json_data['case'],
             'status': json_data.get('status', ''), 
-            'description': json_data.get('description', '')  
+            'description': json_data.get('description', ''),
+            'datetime': formatted_datetime 
         })
 
 @app.route('/post_ct_pet', methods=['POST'])
